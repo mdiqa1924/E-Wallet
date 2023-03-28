@@ -1,0 +1,112 @@
+<div class="main-container">
+    <div class="d-flex flex-wrap">
+        <div class="p-2 flex-fill align-items-stretch bd-highlight">
+            <div class="white-card">
+                <div class="card-header">
+                    Thông tin cá nhân
+                </div>
+                <div class=" table-responsive">
+                    <table class="table table-borderless">
+                        <tbody>
+                            <tr>
+                                <td><strong>Họ tên:
+                                    </strong>{{selectedUser.username}}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Họ tên:
+                                    </strong>{{selectedUser.fullname}}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Email:
+                                    </strong>{{selectedUser.email}}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Điện thoại:
+                                    </strong>{{selectedUser.phone}}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Trạng thái:
+                                    </strong>{{status}} </td>
+
+                            </tr>
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+                {{#if inWaitList}}<a href="/users/active/{{selectedUser._id}}" class="btn btn-light blue">Kích
+                    hoạt</a>{{/if}}
+                {{#if isDeactivated}}<a href="/users/active/{{selectedUser._id}}" class="btn btn-light blue">Kích
+                    hoạt</a>{{/if}}
+                {{#if isActived}}<a href="/users/deactive/{{selectedUser._id}}" class="btn btn-light red">Vô hiệu
+                    hoá</a>{{/if}}
+                <a <a href="/users/requestIdPhoto/{{selectedUser._id}}" class="btn btn-light red">Yêu cầu bổ sung</a>
+                {{#if inWaitList}}<a class="btn btn-light red">Huỷ</a>{{/if}}
+                {{#if isLocked}}<a href="/users/unlock/{{selectedUser._id}}" class="btn btn-light red">Mở
+                    khoá</a>{{/if}}
+
+
+
+            </div>
+        </div>
+        <div class="p-2 flex-fill align-items-stretch bd-highlight">
+            <div class="white-card">
+                <div class="card-header">
+                    Thông tin ví
+                </div>
+                <div class=" table-responsive">
+                    <table class="table">
+                        <tbody>
+
+                            <tr>
+                                <td><strong>Số dư:</strong> {{selectedUser.balance }} vnd</td>
+                            </tr>
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="p-2 flex-fill align-items-stretch bd-highlight">
+            <div class="white-card">
+                <div class="card-header">
+                    Lịch sử giao dịch
+                </div>
+                <table class="table table-hover border">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Loại giao dịch</th>
+                            <th>Số tiền</th>
+                            <th>Thời gian thực hiện</th>
+                            <th>Trạng thái</th>
+                            <th></th>
+                            <th> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each selectedUser.transactions}}
+                        <tr>
+                            <td>{{action}}</td>
+                            <td>{{amount}}</td>
+                            <td>{{time}}</td>
+                            <td>{{status}}</td>
+                            {{#if text}} <td>Nội dung: {{text}}</td>{{/if}}
+                            {{#if fee}} <td>Phí {{fee}} vnđ</td>{{/if}}
+                            <td><button onclick="navigateTransactionView('{{_id}}')" class="btn btn-dark">Xem</button>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+
+
+            </div>
+        </div>
+    </div>
+</div>

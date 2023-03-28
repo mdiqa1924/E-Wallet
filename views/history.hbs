@@ -1,0 +1,27 @@
+<div class="main-container">
+    <h3 class="text-center my-5 text-dark">Lịch sử giao dịch của {{user.fullname}}</h3>
+    <table class="table table-hover border">
+        <thead class="thead-light">
+            <tr>
+                <th>Loại giao dịch</th>
+                <th>Số tiền</th>
+                <th>Thời gian thực hiện</th>
+                <th>Trạng thái</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each user.transactions}}
+            <tr>
+                <td>{{action}}</td>
+                <td>{{amount}}</td>
+                <td>{{time}}</td>
+                <td>{{status}}</td>
+                {{#if text}} <td>Nội dung: {{text}}</td>{{/if}}
+                {{#if fee}} <td>Phí {{fee}} vnđ</td>{{/if}}
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

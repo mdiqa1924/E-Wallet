@@ -1,0 +1,59 @@
+<div class="main-container">
+    <h3 class=" my-5 text-dark">Giao dịch chuyển tiền</h3>
+    <form action="" method="post">
+        <div class="form-group">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputEmail4">Số điện thoại người nhận</label>
+                    <input type="number" name="phone" class="form-control" id="inputEmail4" placeholder="Số thẻ">
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="inputAddress2">Số tiền</label>
+                <input type="number" min="0" name="amount" class="form-control" id="inputAddress2"
+                    placeholder="Số tiền vnđ">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="inputAddress2">Nội dung</label>
+                <input type="text" min="0" name="text" class="form-control" id="inputAddress2"
+                    placeholder="Số tiền vnđ">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="receiverPayFee" id="feePayer1">
+                <label class="form-check-label" for="feePayer1">
+                    Người nhận chịu phí
+                </label>
+            </div>
+
+        </div>
+
+
+        {{#if answer}}
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <div class="alert alert-dismissible alert-{{answer.type}}" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                            aria-hidden="true">×</span>
+                    </button>
+                    <strong>{{answer.intro}}</strong> {{{answer.message}}}
+                </div>
+            </div>
+        </div>
+        {{/if}}
+
+
+
+
+        <button type="submit" class="btn btn-primary">Chuyển tiền</button>
+        <a type="submit" href="/" class="btn btn-danger">Quay lại</a>
+    </form>
+</div>

@@ -1,0 +1,194 @@
+<div class="main-container container">
+    <div class="d-flex flex-wrap ">
+
+
+        <div class="p-2 flex-fill align-items-stretch bd-highlight">
+            <div class="white-card">
+                <div class="card-header">
+                    <strong>Giao dịch chờ đồng ý</strong>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover">
+
+                        {{#if approveList}}
+                        <tbody>
+                            {{#each approveList}}
+                            <tr>
+                                <td onclick="navigateTransactionView('{{_id}}')">{{action}}</td>
+                                <td onclick="navigateTransactionView('{{_id}}')">{{amount}}</td>
+                                <td onclick="navigateTransactionView('{{_id}}')">{{time}}</td>
+                                <td onclick="navigateTransactionView('{{_id}}')" class="status-text">{{status}}</td>
+                                <td><a href="/wallet/approve/{{id}}" class="btn btn-positive blue">Đồng ý</a> <a
+                                        href="/admin/transaction/{{_id}}" class="btn btn-positive green">Xem</a></td>
+
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                        {{/if}}
+                    </table>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+
+        <div class="p-2 flex-fill align-items-stretch bd-highlight">
+            <div class="white-card">
+                <div class="card-header">
+                    <strong>Chờ Kích hoạt</strong>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover">
+
+                        {{#if waitForActiveUsers}}
+                        <tbody>
+                            {{#each waitForActiveUsers}}
+                            <tr>
+                                <td onclick="viewUser('{{_id}}')" class="email">{{email}} </td>
+                                <td><a href="/users/active/{{_id}}" class="btn btn-positive blue">Kích hoạt</a></td>
+                                <td><a href="/users/{{_id}}" class="btn btn-positive green">Xem</a></td>
+
+                                <td>
+                                    <a class="" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                            <path
+                                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                                        </svg></a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="/users/requestIdPhoto/{{_id}}">Yêu cầu bổ sung
+                                            thông tin</a>
+                                        <a class="dropdown-item cancel-btn" href="/users/deactive/{{_id}}">Hủy</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                        {{/if}}
+                    </table>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+        <div class="p-2 flex-fill align-items-stretch bd-highlight">
+            <div class="white-card">
+                <div class="card-header">
+                    <strong>Đã kích hoạt</strong>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        {{!-- <thead>
+                            <th></th>
+                            <th></th>
+                        </thead> --}}
+                        {{#if activeUsers}}
+                        <tbody>
+                            {{#each activeUsers}}
+                            <tr>
+                                <td onclick="viewUser('{{_id}}')" class="email">{{email}} </td>
+                                <td><a href="/users/{{_id}}" class="btn btn-positive green">Xem</a></td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                        {{/if}}
+                    </table>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+        <div class="p-2 flex-fill align-items-stretch bd-highlight">
+            <div class="white-card">
+                <div class="card-header">
+                    <strong>Bị vô hiệu hoá (đăng nhập sai)</strong>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover">
+
+                        {{#if lockedUsers}}
+                        <tbody>
+                            {{#each lockedUsers}}
+                            <tr>
+                                <td onclick="viewUser('{{_id}}')" class="email">{{email}} </td>
+                                <td><a href="/users/unlock/{{_id}}" class="btn btn-positive red">Mở khoá</a><a
+                                        href="/users/active/{{_id}}" class="btn btn-positive red">Active</a><a
+                                        href="/users/{{_id}}" class="btn btn-positive green">Xem</a></td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                        {{/if}}
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="p-2 flex-fill align-items-stretch bd-highlight">
+            <div class="white-card">
+                <div class="card-header">
+                    <strong>Bị vô hiệu hoá</strong>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover">
+
+                        {{#if deactiveUsers}}
+                        <tbody>
+                            {{#each deactiveUsers}}
+                            <tr>
+                                <td onclick="viewUser('{{_id}}')" class="email">{{email}} </td>
+                                <td><a href="/users/active/{{_id}}" class="btn btn-positive red">Active</a><a
+                                        href="/users/{{_id}}" class="btn btn-positive green">Xem</a></td>
+
+
+
+
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                        {{/if}}
+                    </table>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+</div>

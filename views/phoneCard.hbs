@@ -1,0 +1,53 @@
+<div class="main-container">
+    <h3 class=" my-5 text-dark">Mua thẻ điện thoại</h3>
+    <form action="" method="post">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Mệnh giá </label>
+            </div>
+            <select class="custom-select" id="amount" name="amount" required>
+                <option selected>Chọn</option>
+                <option value="10000">10,000</option>
+                <option value="20000">20,000</option>
+                <option value="50000">50,000</option>
+                <option value="100000">100,000</option>
+            </select>
+        </div>
+
+        <div class="input-group mb-3 ">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Nhà cung cấp</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01" name="provider" required>
+                <option selected>Chọn</option>
+                <option value="viettel">Viettel</option>
+                <option value="vinaphone">VinaPhone</option>
+                <option value="mobifone">Mobifone</option>
+
+            </select>
+        </div>
+
+
+
+
+
+        {{#if answer}}
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <div class="alert alert-dismissible alert-{{answer.type}}" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                            aria-hidden="true">×</span>
+                    </button>
+                    <strong>{{answer.intro}}</strong> {{{answer.message}}}
+                </div>
+            </div>
+        </div>
+        {{/if}}
+
+
+
+
+        <button type="submit" class="btn btn-primary">Mua thẻ</button>
+        <a type="submit" href="/" class="btn btn-danger">Quay lại</a>
+    </form>
+</div>

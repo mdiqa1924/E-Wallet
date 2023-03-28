@@ -1,0 +1,98 @@
+<h2 class="text-center my-5 text-dark">Account Registration</h2>
+
+<!-- buộc toàn bộ dòng và cột phải bỏ trong class container -->
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-10 col-lg-8 col-xl-5">
+      <div class="border p-3 rounded bg-light">
+        <form action="register" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="user"><strong>Full name:</strong> </label>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+
+              </div>
+              <input name="fullname" id="fullname" type="text" class="form-control" placeholder="Your Name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="user"><strong>Email:</strong></label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+
+                </div>
+                <input name="email" id="email" type="text" class="form-control" placeholder="Email" required>
+              </div>
+
+              <div class="form-group">
+                <label for="user"><strong>Phone number:</strong></label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+
+                  </div>
+                  <input name="phone" id="phone-number" type="tel" class="form-control"
+                    placeholder="Enter your phone number here" required>
+                </div>
+                <div class="form-group">
+                  <label for="user"><strong>Date of Birth:</strong></label>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+
+                    </div>
+                    <input max='2015-01-01' type="date" id="birthday" name="birthday">
+                  </div>
+
+                </div>
+
+                <div class="form-group">
+                  <label for="user"><strong>ID photo (front side):</strong></label>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+
+                    </div>
+                    <input type="file" class="form-control" accept="image/*" id="fieldPhoto" name="frontIdPhoto">
+                  </div>
+                  <div class="form-group">
+                    <label for="user"><strong>ID photo (back side):</strong></label>
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+
+                      </div>
+                      <input type="file" class="form-control" accept="image/*" id="fieldPhoto" name="backIdPhoto">
+                    </div>
+
+
+                    {{!-- <div class="form-group">
+                      <label for="pass">Password</label>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+
+                        </div>
+                        <input name="password" type="password" class="form-control" placeholder="Password">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="pass">Confirm Password</label>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+
+                        </div>
+                        <input name="confirmPassword" type="password" class="form-control" placeholder="Password">
+                      </div>
+                    </div>
+                    <div class="form-group">
+
+                    </div> --}}
+                    <center>
+                      <div class="form-group">
+                        <button class="btn btn-success px-5" type="submit">Register</button>
+                      </div>
+                    </center>
+                    <div class="form-group">
+                      <p>Already have an account? <a href="/users/login">Login now!</a></p>
+                    </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

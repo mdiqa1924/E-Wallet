@@ -1,0 +1,68 @@
+<div class="main-container">
+    <div class="d-flex flex-wrap">
+        <div class="p-2 flex-fill align-items-stretch bd-highlight">
+            <div class="white-card">
+                <div class="card-header">
+                    Thông tin cá nhân
+                </div>
+                <div class=" table-responsive">
+                    <table class="table table-borderless">
+                        <tbody>
+
+                            <tr>
+                                <td><strong>Họ tên:
+                                    </strong>{{user.fullname}}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Email:
+                                    </strong>{{user.email}}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Điện thoại:
+                                    </strong>{{user.phone}}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Trạng thái:
+                                    </strong>{{status}} </td>
+                            </tr>
+                            <tr>
+                                <td> {{#if requiredIdPhoto}}
+                                    <a href="/users/uploadIdPhoto" class="btn btn-info">Bổ sung CMND</a>
+                                    {{/if }}
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="p-2 flex-fill align-items-stretch bd-highlight">
+            <div class="white-card">
+                <div class="card-header">
+                    Thông tin ví
+                </div>
+                <div class=" table-responsive">
+                    <table class="table">
+                        <tbody>
+
+                            <tr>
+                                <td><strong>Số dư:</strong>
+                                    <span id="user-money" class="user-money">{{user.balance}}</span> vnd
+                                </td>
+                            </tr>
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,198 @@
+body {
+  background-image: linear-gradient(to right, rgba(186, 233, 236, 0.795), rgb(0, 174, 255));
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+div.margin-to-top {
+  margin-top: 5rem;
+}
+
+.main-container {
+  padding-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+.center-balance {
+
+  text-align: center;
+}
+
+.avatar {
+  padding-left: 10px;
+}
+
+.navbar {
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 6px 6px -6px rgb(0, 0, 0);
+
+}
+
+/* table {
+  border-collapse: collapse;
+  padding: 20px;
+
+  display: table;
+}
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+td {
+  display: table-cell;
+  vertical-align: inherit;
+
+}
+
+table td,
+table th {
+  border: 25 solid gray;
+
+}
+
+
+.admin-table {
+  padding: 20px;
+} */
+
+
+td.email {
+  width: 50%;
+  word-wrap: break-word
+}
+
+td.email:hover {
+  cursor: pointer;
+}
+
+
+button.btn:focus,
+button.btn:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
+a.cancel-btn {
+  color: red;
+}
+
+/* .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+} */
+
+
+.white-card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0px solid rgba(0, 0, 0, .125);
+  border-radius: 1rem;
+  padding: 5px;
+}
+
+div.card-header {
+  /* padding: 0.75rem 1.25rem; */
+  margin-bottom: 0;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+
+.logo {
+  width: 2.5rem;
+  height: 2rem;
+}
+
+.center {
+  margin: auto;
+
+  padding: 10px;
+}
+
+.form-container {
+  padding: 20px;
+}
+
+td.button-in-td {
+
+  text-align: right;
+
+}
+
+
+
+a.btn-positive {
+  outline-style: none;
+  padding-left: 5;
+  padding-right: 5;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: #fff;
+  border-color: #fff;
+
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a.blue {
+  color: rgb(47, 47, 221);
+}
+
+a.green {
+  color: green;
+}
+
+a.red {
+  color: red;
+}

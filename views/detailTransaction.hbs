@@ -1,0 +1,67 @@
+<div class="main-container">
+    <div class="d-flex flex-wrap">
+        <div class="p-2 flex-fill align-items-stretch bd-highlight">
+            <div class="white-card">
+                <div class="card-header">
+                    Thông tin giao dịch
+                </div>
+                <div class=" table-responsive">
+                    <table class="table table-borderless">
+                        <tbody>
+
+                            <tr>
+                                <td><strong>Người thực hiện:
+                                    </strong>{{sender.fullname}}</td>
+
+
+                            </tr>
+                            <tr>
+                                <td><a onclick="viewUser('{{sender._id}}')" class="btn btn-light">Xem chi
+                                        tiết</a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Loại giao dịch:
+                                    </strong>{{transaction.action}}</td>
+                            </tr>
+
+                            <tr>
+                                <td class="status-text"><strong>Trạng thái:
+                                    </strong>{{transaction.status}} </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Số tiền:
+                                    </strong>{{transaction.amount}} </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Phí:
+                                    </strong>{{transaction.fee}} </td>
+                            </tr>
+                            {{#if receiver}}
+                            <tr>
+                                <td><strong>Người nhận:
+                                    </strong>{{receiver.fullname}} </td>
+
+
+                            </tr>
+                            <tr>
+                                <td><a onclick="viewUser('{{receiver._id}}')" class="btn btn-light">Xem chi tiết</a>
+                                </td>
+                            </tr>
+
+
+                            {{/if}}
+
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
